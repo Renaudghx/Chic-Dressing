@@ -4,24 +4,25 @@
 import { debounce } from 'lodash';
 import { select, dispatch } from '@wordpress/data';
 import {
-	formatStoreApiErrorMessage,
 	pluckAddress,
 	pluckEmail,
+	removeAllNotices,
 } from '@woocommerce/base-utils';
 import {
 	CartResponseBillingAddress,
 	CartResponseShippingAddress,
-} from '@woocommerce/type-defs/cart-response';
+	BillingAddressShippingAddress,
+} from '@woocommerce/types';
 import isShallowEqual from '@wordpress/is-shallow-equal';
-import { BillingAddressShippingAddress } from '@woocommerce/type-defs/cart';
 
 /**
  * Internal dependencies
  */
 import { STORE_KEY } from './constants';
+import { processErrorResponse } from '../utils';
 
 declare type CustomerData = {
-	billingData: CartResponseBillingAddress;
+	billingAddress: CartResponseBillingAddress;
 	shippingAddress: CartResponseShippingAddress;
 };
 
@@ -67,7 +68,7 @@ const isAddressDirty = <
  * Local cache of customerData used for comparisons.
  */
 let customerData = <CustomerData>{
-	billingData: {},
+	billingAddress: {},
 	shippingAddress: {},
 };
 // Tracks if customerData has been populated.
@@ -77,7 +78,7 @@ let customerDataIsInitialized = false;
  * Tracks which props have changed so the correct data gets pushed to the server.
  */
 const dirtyProps = {
-	billingData: false,
+	billingAddress: false,
 	shippingAddress: false,
 };
 
@@ -85,12 +86,12 @@ const dirtyProps = {
  * Function to dispatch an update to the server. This is debounced.
  */
 const updateCustomerData = debounce( (): void => {
-	const { billingData, shippingAddress } = customerData;
+	const { billingAddress, shippingAddress } = customerData;
 	const customerDataToUpdate = {} as Partial< BillingAddressShippingAddress >;
 
-	if ( dirtyProps.billingData ) {
-		customerDataToUpdate.billing_address = billingData;
-		dirtyProps.billingData = false;
+	if ( dirtyProps.billingAddress ) {
+		customerDataToUpdate.billing_address = billingAddress;
+		dirtyProps.billingAddress = false;
 	}
 
 	if ( dirtyProps.shippingAddress ) {
@@ -102,20 +103,10 @@ const updateCustomerData = debounce( (): void => {
 		dispatch( STORE_KEY )
 			.updateCustomerData( customerDataToUpdate )
 			.then( () => {
-				dispatch( 'core/notices' ).removeNotice(
-					'checkout',
-					'wc/checkout'
-				);
+				removeAllNotices();
 			} )
 			.catch( ( response ) => {
-				dispatch( 'core/notices' ).createNotice(
-					'error',
-					formatStoreApiErrorMessage( response ),
-					{
-						id: 'checkout',
-						context: 'wc/checkout',
-					}
-				);
+				processErrorResponse( response );
 			} );
 	}
 }, 1000 );
@@ -142,9 +133,12 @@ export const pushChanges = (): void => {
 
 	// An address is dirty and needs pushing to the server if the email, country, state, city, or postcode have changed.
 	if (
-		isAddressDirty( customerData.billingData, newCustomerData.billingData )
+		isAddressDirty(
+			customerData.billingAddress,
+			newCustomerData.billingAddress
+		)
 	) {
-		dirtyProps.billingData = true;
+		dirtyProps.billingAddress = true;
 	}
 
 	if (
@@ -158,7 +152,7 @@ export const pushChanges = (): void => {
 
 	customerData = newCustomerData;
 
-	if ( dirtyProps.billingData || dirtyProps.shippingAddress ) {
+	if ( dirtyProps.billingAddress || dirtyProps.shippingAddress ) {
 		updateCustomerData();
 	}
 };
