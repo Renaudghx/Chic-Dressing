@@ -1,0 +1,223 @@
+2023-02-27T12:26:19+00:00 CRITICAL Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\helpers\file.php:161
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\helpers\file.php(161): implode(Array, '|')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\core\base.php(820): WYSIJA_help_file->clear()
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\helpers\cron.php(184): WYSIJA::croned_daily()
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\helpers\cron.php(120): WYSIJA_help_cron->run_scheduled_task('daily')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\helpers\cron.php(56): WYSIJA_help_cron->check_scheduled_task(Array, 'daily')
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\core\base.php(1525): WYSIJA_help_cron->run()
+#6 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(308): init_wysija_cron('')
+#7 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(617): do_action('init')
+#10 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#11 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#12 C:\MAMP\htdocs\P7\Chic_Dressing\wp-cron.php(46): require_once('C:\\MAMP\\htdocs\\...')
+#13 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\helpers\file.php à la ligne 161
+
+2023-02-27T14:37:38+00:00 CRITICAL Uncaught Error: Undefined constant "WYSIJA" in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\widgets\wysija_nl.php:41
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-widget-factory.php(62): WYSIJA_NL_Widget->__construct()
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\widgets.php(115): WP_Widget_Factory->register('WYSIJA_NL_Widge...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\core\base.php(275): register_widget('WYSIJA_NL_Widge...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(308): WYSIJA_help->widgets_init('')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#6 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\widgets.php(1854): do_action('widgets_init')
+#7 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(308): wp_widgets_init('')
+#8 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#9 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#10 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(617): do_action('init')
+#11 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#12 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#13 C:\MAMP\htdocs\P7\Chic_Dressing\wp-cron.php(46): require_once('C:\\MAMP\\htdocs\\...')
+#14 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\widgets\wysija_nl.php à la ligne 41
+
+2023-02-27T14:37:38+00:00 CRITICAL Uncaught Error: Undefined constant "WYSIJA" in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\widgets\wysija_nl.php:41
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-widget-factory.php(62): WYSIJA_NL_Widget->__construct()
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\widgets.php(115): WP_Widget_Factory->register('WYSIJA_NL_Widge...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\core\base.php(275): register_widget('WYSIJA_NL_Widge...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(308): WYSIJA_help->widgets_init('')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#6 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\widgets.php(1854): do_action('widgets_init')
+#7 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(308): wp_widgets_init('')
+#8 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#9 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#10 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(617): do_action('init')
+#11 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#12 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#13 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#14 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#15 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\widgets\wysija_nl.php à la ligne 41
+
+2023-02-27T14:37:48+00:00 CRITICAL Uncaught Error: Undefined constant "WYSIJA" in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\widgets\wysija_nl.php:41
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-widget-factory.php(62): WYSIJA_NL_Widget->__construct()
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\widgets.php(115): WP_Widget_Factory->register('WYSIJA_NL_Widge...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\core\base.php(275): register_widget('WYSIJA_NL_Widge...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(308): WYSIJA_help->widgets_init('')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#6 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\widgets.php(1854): do_action('widgets_init')
+#7 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(308): wp_widgets_init('')
+#8 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#9 C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#10 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(617): do_action('init')
+#11 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#12 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#13 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#14 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#15 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\plugins\wysija-newsletters\widgets\wysija_nl.php à la ligne 41
+
+2023-02-27T16:00:38+00:00 CRITICAL Cannot redeclare ashe_opensans_font_url() (previously declared in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:11) dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\ashe\functions.php à la ligne 242
+
+2023-02-27T16:02:11+00:00 CRITICAL Cannot redeclare ashe_opensans_font_url() (previously declared in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:11) dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\ashe\functions.php à la ligne 242
+
+2023-02-27T16:04:12+00:00 CRITICAL Cannot redeclare ashe_opensans_font_url() (previously declared in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:11) dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\ashe\functions.php à la ligne 242
+
+2023-02-27T16:04:12+00:00 CRITICAL Cannot redeclare ashe_opensans_font_url() (previously declared in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:11) dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\ashe\functions.php à la ligne 242
+
+2023-02-27T16:04:31+00:00 CRITICAL Cannot redeclare ashe_opensans_font_url() (previously declared in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:14) dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\ashe\functions.php à la ligne 242
+
+2023-02-27T16:05:35+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_opensans_f...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#6 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:05:52+00:00 CRITICAL Cannot redeclare ashe_opensans_font_url() (previously declared in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:11) dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\ashe\functions.php à la ligne 242
+
+2023-02-27T16:06:13+00:00 CRITICAL Cannot redeclare ashe_opensans_font_url() (previously declared in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:11) dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\ashe\functions.php à la ligne 242
+
+2023-02-27T16:08:14+00:00 CRITICAL Cannot redeclare ashe_opensans_font_url() (previously declared in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:11) dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\ashe\functions.php à la ligne 242
+
+2023-02-27T16:16:39+00:00 CRITICAL Cannot redeclare ashe_opensans_font_url() (previously declared in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:11) dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\ashe\functions.php à la ligne 242
+
+2023-02-27T16:42:50+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('wp_enqueue_styl...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#6 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:43:07+00:00 CRITICAL Uncaught Error: Undefined constant "wp_enqueue_style" in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php:10
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include()
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#5 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php à la ligne 10
+
+2023-02-27T16:43:47+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_gfonts_scr...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#6 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:44:13+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_gfonts_scr...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-admin\admin-ajax.php(22): require_once('C:\\MAMP\\htdocs\\...')
+#5 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:44:25+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_gfonts_scr...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#6 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:45:06+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_gfonts_scr...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#6 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:46:14+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_gfonts_scr...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-cron.php(46): require_once('C:\\MAMP\\htdocs\\...')
+#5 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:46:14+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_gfonts_scr...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-admin\admin-ajax.php(22): require_once('C:\\MAMP\\htdocs\\...')
+#5 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:46:15+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_gfonts_scr...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#6 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:46:24+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_gfonts_scr...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#6 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+
+2023-02-27T16:46:38+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php on line 10 and at least 2 expected in C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php:612
+Stack trace:
+#0 C:\MAMP\htdocs\P7\Chic_Dressing\wp-content\themes\chicdressing\functions.php(10): remove_action('ashe_gfonts_scr...')
+#1 C:\MAMP\htdocs\P7\Chic_Dressing\wp-settings.php(585): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\P7\Chic_Dressing\wp-config.php(98): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\P7\Chic_Dressing\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\P7\Chic_Dressing\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\P7\Chic_Dressing\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#6 {main}
+  thrown dans C:\MAMP\htdocs\P7\Chic_Dressing\wp-includes\plugin.php à la ligne 612
+

@@ -231,6 +231,7 @@ add_action( 'wp_enqueue_scripts', 'ashe_scripts' );
 /*
 ** Enqueue Google Fonts
 */
+
 function ashe_playfair_font_url() {
     $font_url = '';
     if ( 'off' !== _x( 'on', 'Google font: on or off', 'ashe' ) ) {
@@ -267,7 +268,7 @@ function ashe_rokkitt_font_url() {
 
 function ashe_gfonts_scripts() {
     wp_enqueue_style( 'ashe-playfair-font', ashe_playfair_font_url(), array(), '1.0.0' );
-    wp_enqueue_style( 'ashe-opensans-font', ashe_opensans_font_url(), array(), '1.0.0' );
+    //wp_enqueue_style( 'ashe-opensans-font', ashe_opensans_font_url(), array(), '1.0.0' );
 
     // Load Kalam if selected
     if ( ashe_options( 'typography_logo_family' ) == 'Kalam' || ashe_options( 'typography_nav_family' ) == 'Kalam' ) {
